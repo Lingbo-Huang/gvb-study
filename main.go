@@ -1,12 +1,13 @@
 package main
 
 import (
-	"fmt"
 	"gvb-server/core"
 	"gvb-server/global"
 )
 
 func main() {
+	// 初始化配置文件
 	core.InitConf()
-	fmt.Println(global.Config)
+	// 初始化数据库连接
+	global.DB = core.InitGorm()
 }
