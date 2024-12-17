@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"gopkg.in/yaml.v2"
 	"gvb-server/config"
+	"gvb-server/global"
 	"log"
 	"os"
 )
@@ -21,5 +22,5 @@ func InitConf() {
 		log.Fatalf("unmarshal yamlConf error:%s", err)
 	}
 	log.Println("config yamlFile load Init success.")
-	fmt.Println(c)
+	global.Config = c
 }

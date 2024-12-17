@@ -1,7 +1,12 @@
 package main
 
-import "gvb-server/core"
+import (
+	"fmt"
+	"gvb-server/core"
+	"gvb-server/global"
+)
 
 func main() {
 	core.InitConf()
+	fmt.Println(global.Config)
 }
